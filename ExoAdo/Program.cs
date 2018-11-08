@@ -17,7 +17,7 @@ namespace ExoAdo
                 + "from Application.People "
                 + "WHERE IsPermittedToLogon = 1";
 
-            WriterFile writerFile = new WriterFile();
+            SaveFile saveFile = new SaveFile();
             
             List<People> peoples = new List<People>();
 
@@ -41,7 +41,7 @@ namespace ExoAdo
                     Console.WriteLine(ex.Message);
                 }
             }
-            writerFile.WriteInFile(peoples);
+            saveFile.WriteInFile(peoples);
             Console.ReadLine();
         }
     }

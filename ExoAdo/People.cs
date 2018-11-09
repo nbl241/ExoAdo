@@ -40,7 +40,7 @@ namespace ExoAdo
 
         public override string ToString()
         {
-            return string.Format("{0};{1};{2};{3};{4});{5}", FullName, PreferredName, LogonName, PhoneNumber, ValidFrom, ValidTo);
+            return string.Format("{0};{1};{2};{3};{4});{5};", FullName, PreferredName, LogonName, PhoneNumber, ValidFrom, ValidTo);
         }
 
     }

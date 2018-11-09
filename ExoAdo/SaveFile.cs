@@ -11,7 +11,6 @@ namespace ExoAdo
     class SaveFile
     {
         static string path = @"c:\temp\listPeople.csv";
-        string delimiter = ",";
 
         List<People> peoples = new List<People>();
 
@@ -22,12 +21,7 @@ namespace ExoAdo
                 //Create a file to write to.
                 using (StreamWriter sw = File.CreateText(path))
                 {
-                    sw.WriteLine("{0}");
-                    sw.WriteLine("{1}");
-                    sw.WriteLine("{2}");
-                    sw.WriteLine("{3}");
-                    sw.WriteLine("{4}");
-                    sw.WriteLine("{5}");
+                    peoples.ForEach(x => sw.WriteLine(x.ToString()));
                 }
             }
             //Open the file to read from.
